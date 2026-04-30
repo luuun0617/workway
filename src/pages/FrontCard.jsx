@@ -1,3 +1,7 @@
+import '../assets/images/adv-vectors.svg'
+import '../assets/images/adv-1.png'
+import '../assets/images/adv-2.png'
+import '../assets/images/adv-3.png'
 
 export default function FrontCard() {
     const card = [
@@ -26,7 +30,7 @@ export default function FrontCard() {
             <div className="col col-lg-4 mx-3 mb-4 position-relative" key={i}>
               {i === 2 && (
                 <img
-                  src="public/image/adv-vectors.svg"
+                  src="../assets/images/adv-vectors.svg"
                   alt="男孩貼紙"
                   className="why-sticker d-none d-lg-block"
                   style={{ position: 'absolute', zIndex: 1 }} // 確保貼紙在卡片上方
