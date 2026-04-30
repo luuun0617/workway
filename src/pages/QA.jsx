@@ -33,7 +33,7 @@ export default function QA() {
         <div class="row justify-content-center align-items-end">
           <div class="text-center">
             <img
-              src="/public/images/QA.svg"
+              src="../assets/images/QA.svg"
               alt="QA"
               class="d-inline-block mb-1"
             />
@@ -43,8 +43,8 @@ export default function QA() {
           </h2>
           <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in-right">
             <img
-              src="/images/qa-people.svg"
-              alt=""
+              src="../assets/images/qa-people.svg"
+              alt="qa-people"
             />
           </div>
           <div class="d-grid col-lg-7 col-12 px-3">
@@ -54,11 +54,11 @@ export default function QA() {
                         <div className="accordion-item" key={item.number}>
                           <h2 className="accordion-header">
                             <button
-                              className={`accordion-button ${i !== 0 ? 'collapsed' : ''}`} // 修正：非第一項要加 .collapsed 否則箭頭樣式會錯
+                              className={`accordion-button ${i !== 0 ? 'collapsed' : ''}`}
                               type="button"
                               data-bs-toggle="collapse"
-                              data-bs-target={`#${item.number}`} // 修正：使用樣板字串動態綁定 ID
-                              aria-expanded={i === 0 ? "true" : "false"} // 修正：只有第一項為 true
+                              data-bs-target={`#${item.number}`}
+                              aria-expanded={i === 0 ? "true" : "false"}
                               aria-controls={item.number}
                             >
                               <span className="fs-xl text-natural-50 me-2 mb-4 mb-lg-0">Q.</span>
@@ -67,8 +67,8 @@ export default function QA() {
                           </h2>
                           <div
                             id={item.number}
-                            className={`accordion-collapse collapse ${i === 0 ? 'show' : ''}`} // 修正：只有第一項加 .show
-                            data-bs-parent="#QA" // 修正：對應外層 accordion 的 ID，確保一次只開一個
+                            className={`accordion-collapse collapse ${i === 0 ? 'show' : ''}`}
+                            data-bs-parent="#QA"
                           >
                             <div className="accordion-body">
                               <div className="d-flex flex-row">
@@ -78,26 +78,8 @@ export default function QA() {
                             </div>
                           </div>
                         </div>
-                        
                     ))
                 }
-              {/* <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <span class="fs-xl text-natural-50 me-2 mb-4 mb-lg-0">Q.</span>
-                    <span class="fs-lg text-natural-50 me-2 me-lg-0">一對一諮詢是怎麼進行的？需要準備什麼嗎？</span>
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <div class="d-flex flex-row">
-                      <span class="text-primary fs-xl me-2">A.</span>
-                      <span class="fs-by-sm">諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。</span>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              
             </div>
           </div>
         </div>

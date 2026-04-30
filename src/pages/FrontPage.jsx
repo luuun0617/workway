@@ -48,27 +48,27 @@ function FrontPage() {
       <PicStart />
       {/* story */}
       <Story />
-      <div class="bg-natural-95">
+      <div className="bg-natural-95">
         {/* why */}
-        <div class="container py-lg-7 py-6">
-          <div class="container">
+        <div className="container py-lg-7 py-6">
+          <div className="container">
             {/* 圖示 */}
-            <div class="text-center mb-lg-6 mb-5">
+            <div className="text-center mb-lg-6 mb-5">
               <img
-                src="/images/why.svg"
+                src="../assets/images/why.svg"
                 alt="why"
-                class="d-inline-block mb-1"
+                className="d-inline-block mb-1"
                 style={{width: "160px", height: "auto"}}
               />
-              <h2 class="fs-5xl">選擇職旅 WorkWay</h2>
+              <h2 className="fs-5xl">選擇職旅 WorkWay</h2>
             </div>
             <FrontCard />
-            <div class="col mx-3 d-flex align-items-center">
-              <p class="fs-by-md text-nowrap text-natural-50 me-lg-6 m4-4">
+            <div className="col mx-3 d-flex align-items-center">
+              <p className="fs-by-md text-nowrap text-natural-50 me-lg-6 m4-4">
                 不是套模板的建議，而是為你量身打造的陪伴！
               </p>
               <div
-                class="flex-grow-1 border-top border-natural"
+                className="flex-grow-1 border-top border-natural"
                 style={{height: "1px"}}
               ></div>
             </div>

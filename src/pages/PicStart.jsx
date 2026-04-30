@@ -3,22 +3,22 @@ function PicStart() {
         hero1:{
             id:1,
             title:'hero-1',
-            imageUrl:'/images/hero-1.png',
+            imageUrl:'../assets/images/hero-1.png',
         },
         hero2:{
             id:2,
             title:'hero-2',
-            imageUrl:'/images/hero-2.png',
+            imageUrl:'../assets/images/hero-2.png',
         },
         hero3:{
             id:3,
             title:'hero-3',
-            imageUrl:'/images/hero-3.png',
+            imageUrl:'../assets/images/hero-3.png',
         },
         hero4:{
             id:4,
             title:'hero-4',
-            imageUrl:'/images/hero-4.png',
+            imageUrl:'../assets/images/hero-4.png',
         },
     }
     return(<>

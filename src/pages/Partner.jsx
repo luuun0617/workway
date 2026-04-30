@@ -9,7 +9,7 @@ export default function Partner() {
           >
             <div className="col-lg-6 col mb-5 mb-lg-0 px-lg-5 px-0">
               <img
-                src="/images/team.png"
+                src="../assets/images/team.png"
                 alt="team"
                 className="rounded-1 img-fluid"
               />

@@ -3,7 +3,7 @@ export default function Story() {
     const workers = [
         {
             seniority:'數位遊牧 2 年',
-            imageUrl: '/public/images/story-cover-1.png',
+            imageUrl: '../assets/images/story-cover-1.png',
             title: '轉型成功的設計師',
             content:'從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。',
             work:'視覺設計師',
@@ -11,7 +11,7 @@ export default function Story() {
         },
         {
             seniority:'數位遊牧 2 年',
-            imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week6/index/story-cover-2.png?raw=true',
+            imageUrl: '../assets/images/story-cover-2.png',
             title: '數位遊牧生活實踐者',
             content:'從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。',
             work:'內容策略師',
@@ -19,7 +19,7 @@ export default function Story() {
         },
         {
             seniority:'數位遊牧 3 年',
-            imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week6/index/story-cover-3.png?raw=true',
+            imageUrl: '../assets/images/story-cover-3.png',
             title: '中年轉型的工程師',
             content:'59 歲被裁員時，我以為職涯結束了。職旅顧問不只幫我轉職，更讓我相信自己還有價值。現在我每月穩定接案、收入翻倍。年齡不是限制，只是我還沒找到對的方向。',
             work:'系統架構顧問',
@@ -34,7 +34,7 @@ export default function Story() {
             {/* <!-- 左 --> */}
             <div className="col-lg-4 mb-lg-0 mb-5">
               <img
-                src="/images/logo-icon.svg"
+                src="../assets/images/logo-icon.svg"
                 alt="logo"
                 className="logo-img"
               />
