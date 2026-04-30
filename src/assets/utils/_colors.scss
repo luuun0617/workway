@@ -1,0 +1,42 @@
+// Natural
+$natural-95: #f0f3f5;
+$natural-90: #e0e5eb;
+$natural-85: #d1d9e1;
+$natural-75: #b2bfcc;
+$natural-60: #8599ad;
+$natural-50: #667f99;
+$natural-30: #3d4d5c;
+$natural-10: #141a1f;
+$black: $natural-10;
+$dark: $black;
+$white: #ffffff;
+$light: $white;
+
+// scss-docs-start gray-color-variables
+// $white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+// $black:    #000 !default;
+
+// Primary
+$primary-97: #f1f4fd;
+$primary-90: #d2d9f9;
+$primary-80: #a4b4f3;
+$primary-70: #778eee;
+$primary-60: #4a69e8;
+$primary-40: #1736b5;
+$primary-25: #0e2271;
+$primary: $primary-60;
+// Secondary
+$secondary-90: #d7f4ec;
+$secondary-70: #87dec5;
+$secondary-50: #36c99f;
+$secondary-35: #268c6f;
+$secondary: $secondary-50;

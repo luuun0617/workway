@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.user-image{
+    width: 44px;
+    height: 44px;
+}
+.btn-login{
+    padding: 8px 24px 8px 24px;
+}
+.login-img{
+    width: 700px;
+}
+.modal-right{
+    width: 500px;
+}
+.modal-body{
+    padding: 0;
+}
+.btn-close{
+    top: 34px;
+    right: 36px;
+}
+.input-style{
+    padding: 16px 12px;
+}
+@media (max-width: 767px){
+    .btn-login{
+        padding: 8px 16px 8px 16px;
+    }
+    .btn-close{
+       top: 46px;
+       right: 22px;
+    }
+}

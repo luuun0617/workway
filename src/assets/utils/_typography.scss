@@ -1,0 +1,131 @@
+.fs-display{
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-5xl{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-4xl{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-3xl{
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-2xl{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-xl{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-lg{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-md{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-sm{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-by-2xl{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-by-xl{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 2%;
+}
+.fs-by-lg{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+.fs-by-md{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+.fs-by-sm{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+.fs-by-xs{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+@media (max-width: 767px){
+    .fs-display{
+      font-size: 32px;
+    }
+    .fs-5xl{
+      font-size: 32px;
+    }
+    .fs-4xl{
+      font-size: 28px;
+    }
+    .fs-3xl{
+      font-size: 24px;
+    }
+    .fs-2xl{
+      font-size: 20px;
+    }
+    .fs-xl{
+      font-size: 18px;
+    }
+    .fs-lg{
+    font-size: 16px;
+  }
+    .fs-md{
+    font-size: 14px;
+    }
+    .fs-by-2xl{
+      font-size: 20px;
+    }
+    .fs-by-lg{
+      font-size: 16px;
+    }
+    .fs-by-md{
+      font-size: 14px;
+    }
+    .fs-by-sm{
+      font-size: 14px;
+    }
+    .fs-by-xs{
+      font-size: 12px;
+    }
+}

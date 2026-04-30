@@ -1,0 +1,200 @@
+.plan-title{
+    width: 800px;
+}
+.plan-banner{
+    height: 320px;
+}
+.py-40{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.py-80{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.banner-person{
+    top: 208px;
+    right: 323px;
+}
+.server-bg{
+    background-color: $natural-95;
+}
+.sub-section{
+    padding: 80px 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.donate-bg{
+    background-color: $natural-95;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+@media (max-width: 767px){
+    .plan-title{
+        width: 351px;
+    }
+    .plan-banner{
+        height: 254px;
+    }
+    .banner-bg{
+        height: 254px;
+        width: 100%;
+    }
+    .server-img{
+        width: 120px;
+        height: auto;
+    }
+}
+//card
+.card-plan-g {
+  display: flex;
+  align-items: flex-start;
+  padding: 48px;
+  position: relative;
+  width: 100%;
+  border: 2px solid $secondary-50;
+}
+.card-plan {
+  display: flex;
+  align-items: flex-start;
+  padding: 48px;
+  position: relative;
+  width: 100%;
+  background: $light;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+.card-plan:hover {
+  border: 2px solid $secondary-50;
+  transform: translateY(-4px);
+}
+.card-plan:hover .plan-badge {
+  opacity: 1;
+}
+.card-content-bg{
+    background-color: $natural-95;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+}
+.card-server {
+  background: $light;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+.card-server:hover {
+  border: 2px solid $secondary-50;
+  transform: translateY(-4px);
+}
+.card-server:hover .server-badge {
+  opacity: 1;
+}
+
+.card-subscribe{
+    background-color: $secondary-90;
+    border: 2px solid $secondary-50;
+    border-radius: 24px;
+    padding: 48px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.card-subscribe-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 767px){
+    .card-plan-g {
+      padding: 48px 24px 24px 24px;
+    }
+    .card-plan {
+      padding: 24px;
+    }
+    .card-content-bg{
+        padding: 16px;
+    }
+    .card-subscribe{
+        padding: 24px;
+    }
+
+}
+//badge
+.plan-badge{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: $secondary-50;
+    padding: 8px 16px;
+    border-radius: 24px 0 12px 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.server-badge{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: $secondary-50;
+    padding: 8px 16px;
+    border-radius: 24px 0 12px 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+//btn
+.btn-arrow{
+  padding: 12px 12px 12px 20px;
+}
+@media (max-width: 767px){
+  .btn-arrow{
+    padding: 12px 8px 12px 12px;
+  }
+}
+.plan-ul{
+    list-style: none;
+    padding-left: 0;
+}
+//image
+.plan-1{
+    width: auto;
+    height: 337px;
+}
+.subscribe-deco{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 600px;
+    height: auto;
+    pointer-events: none;
+}
+@media (max-width: 767px){
+    .subscribe-deco{
+        top: 0px;
+        right: 0px;
+        
+    }
+
+}
+.subscribe-left{
+    position: absolute;
+    bottom: -2px;
+    left: 24px;
+}
+.subscribe-right{
+    position: absolute;
+    bottom: -2px;
+    right: 24px;
+}

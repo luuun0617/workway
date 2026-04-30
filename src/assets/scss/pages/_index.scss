@@ -1,0 +1,232 @@
+@import '/src/assets/utils/colors';
+.index-title {
+  font-size: 100px;
+}
+.gradient-ball {
+  background: url('../images/gradient-ball.png') no-repeat center 40px /
+    800px;
+}
+.story-card {
+  margin-right: calc((100vw - 1320px) / -2);
+  padding-right: 12px;
+}
+.story-col {
+  min-width: 340px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px){
+  .logo-img{
+    width: 48px;
+    height: auto;
+  }
+  .story-col{
+    max-width: 320px;
+  }
+  .story-card{
+    overflow-x: auto;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+}
+.bg-story{
+  background-color: $natural-95;
+  position: absolute;
+  top: 690px;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+.bg-partner{
+  background-color: $natural-95;
+}
+.bg-natural-95{
+  background-color: $natural-95;
+}
+.bg-contact{
+  background-color: $primary;
+}
+.bg-grid {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week6/index/bg-grid.png?raw=true);
+  background-repeat: repeat;
+  background-size: auto;
+}
+@media (max-width: 767px){
+  .bg-story{
+    top: 775.4px;
+    margin-left: -12px;
+    width: calc(100% + 24px);
+  }
+  .bg-natural-95{
+    margin-left: -12px;
+    width: calc(100% + 24px);
+  }
+  .bg-grid {
+    margin-left: -12px;
+    width: calc(100% + 24px);
+  }
+}
+.mb-40{
+  margin-bottom: 40px;
+}
+.pt-40{
+  padding-top: 40px;
+}
+.accordion-body{
+  padding: 16px 24px 24px 24px;
+}
+//btn
+.btn-start{
+  padding: 16px 12px 16px 20px;
+}
+.btn-about{
+  padding: 12px 12px 12px 20px;
+}
+.btn-qa{
+  background-color: $white;
+  border-color: $natural-95;
+  padding: 24px;
+}
+
+@media (max-width: 767px){
+  .btn-start{
+    padding: 8px 8px 12px 12px;
+  }
+  .btn-about{
+    padding: 12px 8px 12px 12px;
+  }
+  .btn-contact{
+    text-align: start;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+}
+.card-service{
+  background-color: $white;
+  padding-top: 64px;
+  padding-bottom: 48px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.12);
+}
+.card-a{
+  padding: 16px 24px 24px;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+/* 卡牌 hover */
+.why-card img {
+  transition: transform 0.6s ease;
+}
+.why-card:hover img {
+  transform: scale(1.03);
+}
+
+.why-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.6); /* 0.6 = 60% 透明度 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+.why-card:hover .why-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.why-badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px 12px 12px;
+  background-color: $natural-95;
+  border-radius: 0 1rem 0 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.9);
+}
+.service-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 10.5px 16px 10.5px 16px;
+  background-color: $natural-95;
+  border-radius: 1rem 0 1rem 0;
+}
+
+.career-partner {
+  background: url(/assets/images/gradient-ball.png) no-repeat
+    calc(100% + 271px) calc(100% + 290px) / 800px;
+}
+@media (max-width: 767px){
+  .service-badge {
+    padding: 8px 16px 8px 16px;
+    background-color: $natural-95;
+    border-radius: 0.75rem 0 0.75rem 0;
+  }
+  .career-partner {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    background: url(/assets/images/gradient-ball.png) no-repeat
+      calc(100% + 158px) calc(100% + 150px) / 400px;
+  }
+  .bg-primary{
+    width: calc(100% + 24px);
+    margin-left: -12px;
+  }
+}
+.sever-card {
+  max-width: 306px;
+}
+.badge-tl-xl {
+  border-top-left-radius: var(--bs-border-radius-xl);
+}
+
+.border-dashed {
+  border-bottom: 1px dashed;
+}
+.border-dotted {
+  border-bottom-style: dotted;
+}
+.accordion-button:not(.collapsed){
+  background-color: $white;
+}
+
+.why-sticker {
+  position: absolute;
+  top: -184px;
+  right: 8px;
+  width: 196px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  .why-sticker {
+    top: -60px;
+    width: 110px;
+  }
+}
+.step-col{
+  justify-content: center;
+}
+@media (max-width: 767px){
+  .step-col{
+    justify-content: start;
+    overflow: auto;
+  }
+}
