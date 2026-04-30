@@ -1,3 +1,4 @@
+
 export default function FrontCard() {
     const card = [
         {
@@ -25,7 +26,7 @@ export default function FrontCard() {
             <div className="col col-lg-4 mx-3 mb-4 position-relative" key={i}>
               {i === 2 && (
                 <img
-                  src="../assets/images/adv-vectors.svg"
+                  src="public/image/adv-vectors.svg"
                   alt="男孩貼紙"
                   className="why-sticker d-none d-lg-block"
                   style={{ position: 'absolute', zIndex: 1 }} // 確保貼紙在卡片上方
