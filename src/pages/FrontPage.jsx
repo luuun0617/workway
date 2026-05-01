@@ -3,6 +3,8 @@ import '../assets/utils/_typography.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+
+import why from "../assets/images/why.svg"
 import PicStart from './PicStart';
 import Story from './Story';
 import FrontCard from './FrontCard';
@@ -55,7 +57,7 @@ function FrontPage() {
             {/* 圖示 */}
             <div className="text-center mb-lg-6 mb-5">
               <img
-                src="../assets/images/why.svg"
+                src={why}
                 alt="why"
                 className="d-inline-block mb-1"
                 style={{width: "160px", height: "auto"}}

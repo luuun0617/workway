@@ -1,24 +1,28 @@
+import hero1 from '../assets/images/hero-1.png'
+import hero2 from '../assets/images/hero-2.png'
+import hero3 from '../assets/images/hero-3.png'
+import hero4 from '../assets/images/hero-4.png'
 function PicStart() {
     const data = {
         hero1:{
             id:1,
             title:'hero-1',
-            imageUrl:'../assets/images/hero-1.png',
+            imageUrl:{hero1},
         },
         hero2:{
             id:2,
             title:'hero-2',
-            imageUrl:'../assets/images/hero-2.png',
+            imageUrl:{hero2},
         },
         hero3:{
             id:3,
             title:'hero-3',
-            imageUrl:'../assets/images/hero-3.png',
+            imageUrl:{hero3},
         },
         hero4:{
             id:4,
             title:'hero-4',
-            imageUrl:'../assets/images/hero-4.png',
+            imageUrl:{hero4},
         },
     }
     return(<>

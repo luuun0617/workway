@@ -1,3 +1,5 @@
+import qa from "../assets/images/QA.svg"
+import qaPeople from "../assets/images/qa-people.svg"
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 export default function QA() {
     const data =[
@@ -33,7 +35,7 @@ export default function QA() {
         <div class="row justify-content-center align-items-end">
           <div class="text-center">
             <img
-              src="../assets/images/QA.svg"
+              src={qa}
               alt="QA"
               class="d-inline-block mb-1"
             />
@@ -43,7 +45,7 @@ export default function QA() {
           </h2>
           <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in-right">
             <img
-              src="../assets/images/qa-people.svg"
+              src={qaPeople}
               alt="qa-people"
             />
           </div>

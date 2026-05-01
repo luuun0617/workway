@@ -1,26 +1,30 @@
+import step1 from '../assets/images/step-1.svg'
+import step2 from '../assets/images/step-2.svg'
+import step3 from '../assets/images/step-3.svg'
+import step4 from '../assets/images/step-4.svg'
 export default function Process() {
     const steps = [
         {
             number:'1',
-            imgUrl: '../assets/images/step-1.svg',
+            imgUrl: {step1},
             title: '免費註冊會員',
             content: '透過網站左上角按鈕，立即註冊免費會員，與我們開始建立連結。'
         },
         {
             number:'2',
-            imgUrl: '../assets/images/step-2.svg',
+            imgUrl: {step2},
             title: '填寫職旅計劃',
             content: '了解你的技能、熱情與市場需求的交會點，找出屬於你的獨特定位。'
         },
         {
             number:'3',
-            imgUrl: '../assets/images/step-3.svg',
+            imgUrl: {step3},
             title: '初次諮詢',
             content: '依據你的目標與現況，給予最直接的建議，建立清晰的轉型思路。'
         },
         {
             number:'4',
-            imgUrl: '../assets/images/step-4.svg',
+            imgUrl: {step4},
             title: '實戰指導',
             content: '專家一對一指導，從品牌建立到客戶開發，每一步都有明確方向。'
         },
