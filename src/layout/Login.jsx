@@ -1,3 +1,6 @@
+import login from '../assets/images/login.png'
+import google from '../assets/images/google.svg'
+import discord from '../assets/images/discord.svg'
 function Login() {
     return(<>
     <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -6,7 +9,7 @@ function Login() {
           <div className="modal-body d-flex">
             {/* 左邊 Banner 圖片 */}
             <div className="d-none d-lg-block">
-              <img src="/public/images/login.png" alt="banner" className="rounded-start-3 login-img" />
+              <img src={login} alt="banner" className="rounded-start-3 login-img" />
             </div>
             {/* 右邊登入區 */}
             <div className="modal-right px-4 py-6 position-relative"> 
@@ -18,13 +21,13 @@ function Login() {
                 <div className="d-grid gap-4 border-bottom">
                     <button className="btn btn-outline btn-outline-natural-85 text-dark py-3 fs-by-md" type="button">
                       <span className="align-bottom me-lg-1 me-0">
-                        <img src="/public/images/google.svg" alt="google-icon"/>
+                        <img src={google} alt="google-icon"/>
                       </span>
                       Google
                     </button>
                     <button className="btn btn-outline-natural-85 text-dark mb-5 py-3 fs-by-md" type="button">
                     <span className="align-bottom me-lg-1 me-0">
-                      <img src="/public/images/discord.svg" alt="discord-icon" />
+                      <img src={discord} alt="discord-icon" />
                     </span>
                         Discord
                     </button>

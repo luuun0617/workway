@@ -1,4 +1,4 @@
-import qa from "../assets/images/QA.svg"
+import qaImg from "../assets/images/QA.svg"
 import qaPeople from "../assets/images/qa-people.svg"
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 export default function QA() {
@@ -35,7 +35,7 @@ export default function QA() {
         <div class="row justify-content-center align-items-end">
           <div class="text-center">
             <img
-              src={qa}
+              src={qaImg}
               alt="QA"
               class="d-inline-block mb-1"
             />

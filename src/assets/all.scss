@@ -1,4 +1,8 @@
+$accordion-button-icon:         url('./images/arrow-left.svg') !default;
+$accordion-button-active-icon:  url('./images/arrow-down.svg') !default;
+
 @import 'bootstrap/scss/functions';
+
 
 @import './variables';
 @import './variables-dark';

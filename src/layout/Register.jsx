@@ -1,3 +1,6 @@
+import google from '../assets/images/google.svg'
+import discord from '../assets/images/discord.svg'
+import register from '../assets/images/register.png'
 function Register() {
     return(<>
     <div className="modal fade" id="registerModal" tabIndex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
@@ -15,13 +18,13 @@ function Register() {
               <div className="d-grid gap-4 border-bottom">
                 <button className="btn btn-outline-natural-85 text-dark py-3 fs-by-md" type="button">
                   <span className="align-bottom me-lg-1 me-0">
-                    <img src="/public/images/google.svg" alt="google-icon"/>
+                    <img src={google} alt="google-icon"/>
                   </span>
                   Google
                 </button>
                 <button className="btn btn-outline-natural-85 text-dark mb-5 py-3 fs-by-md" type="button">
                   <span className="align-bottom me-lg-1 me-0">
-                    <img src="/public/images/discord.svg" alt="discord-icon" />
+                    <img src={discord} alt="discord-icon" />
                   </span>
                   Discord
                 </button>
@@ -79,7 +82,7 @@ function Register() {
 
             {/* 右邊 Banner 圖片 */}
             <div className="d-none d-lg-block">
-              <img src="/public/images/register.png" alt="banner" className="rounded-end-3 login-img" />
+              <img src={register} alt="banner" className="rounded-end-3 login-img" />
             </div>
           </div>
         </div>

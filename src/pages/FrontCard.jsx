@@ -1,26 +1,26 @@
 
 import advVectors from '../assets/images/adv-vectors.svg'
-import adv1 from '../assets/images/adv-1.png'
-import adv2 from '../assets/images/adv-2.png'
-import adv3 from '../assets/images/adv-3.png'
+import advOne from '../assets/images/adv-1.png'
+import advTwo from '../assets/images/adv-2.png'
+import advThree from '../assets/images/adv-3.png'
 
 
 export default function FrontCard() {
     const card = [
         {
-            imgUrl: {adv1},
+            imgUrl: advOne,
             context: '我們的顧問都是親身走過這條路的專家，不是紙上談兵的理論家。你所學到的每一個建議，都是經過無數次嘗試與錯誤後萃取的精華。',
             title: '實戰經驗',
             icon:'ads_click'
         },
         {
-            imgUrl: {adv2},
+            imgUrl: advTwo,
             context: '顧問會在每個關卡提供可執行的指引與回饋，確保你一路走得穩、走得對。',
             title: '全方位支持',
             icon: 'radio_button_checked'
         },
         {
-            imgUrl: {adv3},
+            imgUrl: advThree,
             context: '與同路人交流、互相打氣與分享資源，讓你的轉型不再孤軍奮戰。',
             title: '社群力量',
             icon:'group'
