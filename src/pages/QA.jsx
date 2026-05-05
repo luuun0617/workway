@@ -30,27 +30,27 @@ export default function QA() {
         }
     ]
     return(<>
-    <div class="bg-grid">
-      <div class="container py-lg-7 py-6">
-        <div class="row justify-content-center align-items-end">
-          <div class="text-center">
+    <div className="bg-grid">
+      <div className="container py-lg-7 py-6">
+        <div className="row justify-content-center align-items-end">
+          <div className="text-center">
             <img
               src={qaImg}
               alt="QA"
-              class="d-inline-block mb-1"
+              className="d-inline-block mb-1"
             />
           </div>
-          <h2 class="fs-5xl text-center mb-5 mb-lg-6">
+          <h2 className="fs-5xl text-center mb-5 mb-lg-6">
             你可能有些困惑...
           </h2>
-          <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in-right">
+          <div className="col-lg-5 d-none d-lg-block" data-aos="zoom-in-right">
             <img
               src={qaPeople}
               alt="qa-people"
             />
           </div>
-          <div class="d-grid col-lg-7 col-12 px-3">
-            <div class="accordion" id="QA">
+          <div className="d-grid col-lg-7 col-12 px-3">
+            <div className="accordion" id="QA">
                 {
                     data.map((item, i)=>(
                         <div className="accordion-item" key={item.number}>

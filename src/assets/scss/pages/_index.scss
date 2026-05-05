@@ -74,6 +74,9 @@
 .pt-40{
   padding-top: 40px;
 }
+.pb-40{
+  padding-bottom: 40px;
+}
 .accordion-body{
   padding: 16px 24px 24px 24px;
 }
@@ -169,7 +172,7 @@
 }
 
 .career-partner {
-  background: url(/assets/images/gradient-ball.png) no-repeat
+  background: url('../../images/gradient-ball.png') no-repeat
     calc(100% + 271px) calc(100% + 290px) / 800px;
 }
 @media (max-width: 767px){

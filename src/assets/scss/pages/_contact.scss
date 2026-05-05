@@ -1,3 +1,4 @@
+@import '../../utils/colors';
 .contact-card{
     border-radius: 24px;
     background-color: $white;
@@ -7,4 +8,15 @@
     position: absolute;
     right: 40px;
     top: -137px;
+}
+.text-warn{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #667F99;
+    letter-spacing: 2%;
+    vertical-align: middle;
+}
+.side-width{
+    width: 300px;
 }

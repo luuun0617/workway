@@ -1,4 +1,5 @@
 import '../assets/scss/layout/_header.scss';
+import { NavLink } from "react-router-dom";
 
 import logo from "../assets/images/logo.svg"
 import LoginBtn from '../btn/LoginBtn';
@@ -7,19 +8,19 @@ import Register from './Register';
 // import { LoginBtn } from "../btn/LoginBtn";
 function Header() {
     return(<>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom py-4 px-3 py-lg-3 px-lg-0">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"><img src={logo} alt="logo" /></a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item me-3">
-              <a class="nav-link active" aria-current="page" href="plan.html">服務方案</a>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom py-4 px-3 py-lg-3 px-lg-0">
+      <div className="container">
+        <NavLink className='nav-link ' to='/'><img src={logo} alt="logo" /></NavLink>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li className="nav-item me-3">
+              <NavLink className='nav-link' to='/Plan'>服務方案</NavLink>
             </li>
-            <li class="nav-item me-3">
-              <a class="nav-link active" aria-current="page" href="about.html">關於職旅</a>
+            <li className="nav-item me-3">
+              <NavLink className='nav-link' to='/About'>關於職旅</NavLink>
             </li>
-            <li class="nav-item me-3">
-              <a class="nav-link active" aria-current="page" href="contact.html">聯絡我們</a>
+            <li className="nav-item me-3">
+              <NavLink className='nav-link' to='/Contact'>聯絡我們</NavLink>
             </li>
           </ul>
         </div>

@@ -1,3 +1,5 @@
+@import '../../utils/colors';
+
 .about-banner{
     height: 347px;
 }
@@ -17,7 +19,7 @@
     overflow: hidden;
 }
 .info-bg{
-    // background-color: $natural-95;
+    background-color: $natural-95;
     height: 979px;
     position: absolute;
     top: 0;
@@ -27,6 +29,9 @@
 }
 .me-40{
     margin-right: 40px;
+}
+.w-66{
+    width: 66px;
 }
 @media (max-width: 767px){
     .about-banner{
@@ -43,6 +48,13 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
+}
+.mentor-scroll-wrap .d-flex::after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 1px;
 }
 
 //card
