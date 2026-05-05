@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function Inform() {
     return(<>
     <div className="container pt-40">
@@ -36,10 +37,13 @@ export default function Inform() {
               </a>
             </div>
             <div className="ms-lg-auto">
-              <button type="button" className="btn btn-dark btn-about">
-                <a href="contact.html" className="me-1 fs-by-md text-white">預約免費職涯探索</a>
-                <span className="material-icons-outlined align-bottom">keyboard_arrow_right</span>
-              </button>
+              <NavLink 
+                to="/Contact" 
+                className="btn btn-dark btn-about d-inline-flex align-items-center"             
+              >
+                <span className="me-1 fs-by-md text-white">預約免費職涯探索</span>
+                <span className="material-icons-outlined">keyboard_arrow_right</span>
+              </NavLink>
             </div>
           </div>
         </div>

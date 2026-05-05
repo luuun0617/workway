@@ -1,15 +1,6 @@
+import WorkDropdown from "../btn/WorkDropdown"
 
 export default function Basic() {
-    const work = [
-         "全職上班族" , 
-         "兼職工作者" , 
-         "自由工作者/接案者" , 
-         "數位遊牧者" , 
-         "創業者/企業主" , 
-         "待業中" , 
-         "其他"
-    ]
-
     const data =[
         {
             id: "name",
@@ -32,7 +23,8 @@ export default function Basic() {
             placeholder: "電話",
             hint: "我們不會以電話主動聯繫您，告知您要至ATM操作轉帳"
         },
-    ]
+    ];
+    
     return(<>
     <div className="d-flex flex-lg-row flex-column gap-4 border-bottom pb-lg-6 pb-5 mb-lg-6 mb-lg-5 mb-4">
       <div className="side-width flex-shrink-0 flex-lg-column d-flex justify-content-lg-start justify-content-between">
@@ -57,18 +49,7 @@ export default function Basic() {
             )}
           </div>
         ))}
-        <div className="dropdown">
-          <button className="form-select text-start py-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            目前職業/工作身分
-          </button>
-          <ul className="dropdown-menu w-100 mt-2">
-              {work.map((work,i)=>(
-                  <li key={i}>
-                      <a className="dropdown-item" href="#">{work}</a>
-                  </li>
-              ))}
-          </ul>
-        </div>
+        <WorkDropdown />
       </div>
     </div>
     </>)

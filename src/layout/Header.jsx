@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.svg"
 import LoginBtn from '../btn/LoginBtn';
 import Login from './Login';
 import Register from './Register';
-// import { LoginBtn } from "../btn/LoginBtn";
+
 function Header() {
     return(<>
     <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom py-4 px-3 py-lg-3 px-lg-0">

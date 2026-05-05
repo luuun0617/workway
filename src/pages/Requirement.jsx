@@ -1,3 +1,5 @@
+import ExpertDropdown from "../btn/ExpertDropdown"
+
 export default function Requirement() {
     const career = [
         {
@@ -24,18 +26,7 @@ export default function Requirement() {
             id:"career-6",
             label:"其他（請填寫下題）"
         },
-    ]
-
-    const work = [
-         "全職上班族" , 
-         "兼職工作者" , 
-         "自由工作者/接案者" , 
-         "數位遊牧者" , 
-         "創業者/企業主" , 
-         "待業中" , 
-         "其他"
-    ]
-
+    ];
     
     return (<>
     <div className="d-flex flex-lg-row flex-column gap-4 border-bottom pb-lg-6 pb-5 mb-lg-6 mb-lg-5 mb-4">
@@ -64,18 +55,7 @@ export default function Requirement() {
           </div>
           <p className="text-warn px-lg-2">可複選，讓我們更了解你的狀況，安排最適合的顧問與建議。</p>
         </div>
-        <div className="dropdown mb-lg-5 mb-4">
-          <button className="form-select text-start py-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            期望諮詢的專家
-          </button>
-          <ul className="dropdown-menu w-100 mt-2">
-              {work.map((work,i)=>(
-                  <li key={i}>
-                      <a className="dropdown-item" href="#">{work}</a>
-                  </li>
-              ))}
-          </ul>
-        </div>
+        <ExpertDropdown />
         <div className="mb-lg-5 mb-4">
           <div className="form-floating">
             <textarea className="form-control" 

@@ -2,11 +2,7 @@ import { createHashRouter } from "react-router-dom";
 
 import App from '../App';
 
-import { FrontPage ,About , Plan , Contact } from "../pages/Catalog";
-// import FrontPage from '../pages/FrontPage'
-// import About from '../pages/About'
-// import Plan from '../pages/Plan'
-// import Contact from '../pages/Contact';
+import { FrontPage ,About , Plan , Contact , Privacy , Terms } from "../pages/Catalog";
 const routes = [
   {
     path: '/',
@@ -27,6 +23,14 @@ const routes = [
       {
         path:'contact',
         element:<Contact />
+      },
+      {
+        path:'privacy',
+        element:<Privacy />
+      },
+      {
+        path:'terms',
+        element:<Terms />
       },
     ]
   }
