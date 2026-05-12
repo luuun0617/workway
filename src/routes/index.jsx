@@ -3,6 +3,7 @@ import { createHashRouter } from "react-router-dom";
 import App from '../App';
 
 import { FrontPage ,About , Plan , Contact , Privacy , Terms } from "../pages/Catalog";
+import User from "../personal/User";
 const routes = [
   {
     path: '/',
@@ -31,6 +32,10 @@ const routes = [
       {
         path:'terms',
         element:<Terms />
+      },
+      {
+        path:'user',
+        element:<User />
       },
     ]
   }

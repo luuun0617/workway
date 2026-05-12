@@ -63,17 +63,6 @@ export default function Terms() {
                   )}
                 </div>
               ))}
-              <div>
-                <p className="fs-by-xl mb-lg-3 mb-2">七、政策更新</p>
-                <p className="fs-by-md">
-                  我們保留隨時修改本政策之權利，重大變更將提前公告。
-                  <br />
-                  如對本政策有任何疑問，請聯繫：
-                  <a href="mailto:privacy@workway.com" className="ms-1">
-                    privacy@workway.com
-                  </a>
-                </p>
-              </div>
             </div>
           </div>
         </div>

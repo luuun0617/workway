@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$MxKQCIuOK83uNod6dZur/eMA5Lq1J/ba0WfRsBd0KGZbi0.IzO2x6",
+      "id": 2
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$C9P4o6S3noy6oaq6GMF6pO.mU63/16a9.yIw1izVLTWRWz5.OBnxa",
+      "nickName": "user123",
+      "id": 3
+    },
+    {
+      "email": "user123@gmail.com",
+      "password": "$2a$10$pXqf.zwA5bo.uBxrufiIxuJLNBzbc.7MnFRhm9MPT.pTG/aaKTf8O",
+      "nickName": "user123",
+      "id": 4
+    },
+    {
+      "email": "123@gmail.com",
+      "password": "$2a$10$OrWucIx/arW3yuqDaYBLXegvVwXJDoNDRv9DCWcdBAaUQGkhBR9Ty",
+      "nickName": "123",
+      "id": 5
+    },
+    {
+      "email": "234@gmail.com",
+      "password": "$2a$10$WVqv8tCP6tBOXtdVILdX7eMFhWYWlP8EVr56BYH4H1SX2IC.wQpaO",
+      "id": 6
+    },
+    {
+      "email": "345@gmail.com",
+      "password": "$2a$10$O7iEzRcwp8yTIJxGYNiV7OmZuzjZyWst9hMkzgmrqUo5NYFm2xWHy",
+      "id": 7
+    },
+    {
+      "email": "456@gmail.com",
+      "password": "$2a$10$MLDt3IHmZqF958sl2Ytp3ODdodIrtC/49rt14CGjbfifKxhosiqRO",
+      "id": 8
+    },
+    {
+      "email": "567@gmail.com",
+      "password": "$2a$10$RyK8w.XN92KzPYjQZAMjDOsP4HtGEX9kByrcsufHDB8SzNvqslQBG",
+      "id": 9
+    },
+    {
+      "email": "678@gmail.com",
+      "password": "$2a$10$K4deVFNNmxcpztkOpbuIXuiNOV6axLuFRCrTZIKIlloAPa9n1kXlu",
+      "id": 10,
+      "userPlans": {
+        "jobStatus": "全職上班族",
+        "industry": "科技",
+        "seniority": "1-3 年",
+        "incomeStatus": "30k-50k",
+        "jobDescription": "無",
+        "portfolioUrl": "",
+        "attachment": {},
+        "shortTermGoal": "無",
+        "longTermVision": "無",
+        "placeStatus": "office",
+        "targetIncome": "40000",
+        "challenges": [
+          "技能需要提升"
+        ],
+        "resources": [
+          "專業技能提升建議"
+        ],
+        "interestedPlans": [
+          "客製化方案"
+        ],
+        "coreSpecialties": [
+          "設計/創意",
+          "教育/培訓"
+        ],
+        "background": "無",
+        "skills": "無",
+        "languages": "無",
+        "certificates": "無",
+        "educationHistory": "無",
+        "trainingAndWorkshops": "無"
+      }
+    }
+  ],
+  "contacts": [
+    {
+      "name": "陳小明",
+      "email": "user123@gmail.com",
+      "number": "12345678",
+      "workType": "數位遊牧者",
+      "contactMethod": "信箱",
+      "expert": "財務自由規劃顧問",
+      "mainChallenges": "無",
+      "desiredGoal": "無",
+      "careerThemes": [
+        "career-1",
+        "career-2"
+      ],
+      "time": [
+        "平日下午(13:00-17:00)",
+        "週末晚上(18:00-21:00)"
+      ],
+      "reserve": "2026-05-12",
+      "referralSource": [
+        "Instagram",
+        "Facebook",
+        "職涯顧問介紹尋"
+      ],
+      "otherComment": "無",
+      "isGetInfo": true,
+      "isAgreeTerm": true,
+      "id": 1
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-import WorkDropdown from "../btn/WorkDropdown"
+import WorkDropdown from "../../btn/WorkDropdown"
 
-export default function Basic() {
+export default function Basic({ register, setValue, errors , resetKey }) {
     const data =[
         {
             id: "name",
@@ -41,15 +41,23 @@ export default function Basic() {
               className="form-control"
               id={item.id}
               placeholder={item.placeholder}
+              {...register((item.id),{
+                required:{
+                  value:true,
+                  message:`${item.label}為必填`
+                }
+              })}
             />
             <label htmlFor={item.id}>{item.label}</label>
-
             {item.hint && (
               <p className="text-warn px-2 mt-1">{item.hint}</p>
             )}
+            {errors[item.id] && <span className="text-danger ps-2">此欄位必填</span>}
           </div>
         ))}
-        <WorkDropdown />
+        <WorkDropdown 
+          key={resetKey} 
+          onSelect={(val) => setValue("workType", val)} />
       </div>
     </div>
     </>)

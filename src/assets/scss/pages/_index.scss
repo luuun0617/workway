@@ -38,6 +38,7 @@
   width: 100%;
   height: 200px;
   z-index: -1;
+  pointer-events: none
 }
 .bg-partner{
   background-color: $natural-95;

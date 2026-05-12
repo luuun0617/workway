@@ -1,4 +1,5 @@
-export default function Link() {
+import { NavLink } from "react-router-dom";
+export default function Link({ register , errors}) {
     const channel = [
         { 
             id:"contact-1",
@@ -77,11 +78,11 @@ export default function Link() {
         },
         {
             id:"source-8",
-            source:"曾參加職旅活動 / 工作坊尋"
+            source:"曾參加職旅活動 / 工作坊"
         },
         {
             id:"source-9",
-            source:"職涯顧問介紹尋"
+            source:"職涯顧問介紹"
         },
         {
             id:"source-10",
@@ -102,18 +103,24 @@ export default function Link() {
                 channel.map((item,i)=>(
                     <div className="ms-lg-2 form-check form-check-inline me-lg-5 fs-by-sm" key={item.id}>
                       <input 
-                      className="form-check-input" 
-                      type="radio" 
-                      name="channel" 
-                      id={item.id} 
-                      value={item.id}
-                      defaultChecked={i === 0}
+                        className="form-check-input" 
+                        type="radio" 
+                        name="channel" 
+                        id={item.id} 
+                        defaultValue={item.channel}
+                        defaultChecked={i === 0}
+                        {...register("contactMethod", { 
+                            required: "請選擇一種聯絡方式" 
+                        })}
                       />
-                      <label className="form-check-label" 
-                      htmlFor={item.id}>{item.channel}</label>
+                      <label 
+                        className="form-check-label" 
+                        htmlFor={item.id}>{item.channel}
+                      </label>
                     </div>
                 ))
             }
+            {errors.contactMethod && <div className="text-danger fs-by-sm mt-1">{errors.contactMethod.message}</div>}
           </div>
         </div>
         <div className="mb-lg-5 mb-4">
@@ -123,26 +130,33 @@ export default function Link() {
                 time.map((item)=>(
                     <div className="ms-lg-2 form-check form-check-inline fs-by-sm me-5 mb-2" key={item.id}>
                       <input 
-                      className="form-check-input" 
-                      type="checkbox" 
-                      id={item.id} 
-                      value={item.id} />
+                        className="form-check-input" 
+                        type="checkbox" 
+                        id={item.id} 
+                        defaultValue={item.time}
+                        {...register("time",{
+                            required: "建議您可以勾選 2 個時段以上",
+                            validate: (val) => val.length >= 2 || "建議您可以勾選 2 個時段以上"
+                        })}
+                    />
                       <label className="form-check-label" htmlFor={item.id}>{item.time}</label>
                     </div>
                 ))
             }
+            {errors.time && <span className="text-danger ps-2">{errors?.time?.message}</span>}
           </div>
           <p className="text-warn px-lg-4">建議您可以勾選 2 個時段以上</p>
         </div>
         <div className="form-floating mb-5">
           <input 
-          type="date" 
-          className="form-control" 
-          id="reserve" 
-          placeholder="reserve"
-          name="reserve"
+            type="date" 
+            className="form-control" 
+            id="reserve" 
+            placeholder="reserve"
+            name="reserve"
+            {...register("reserve")}
            />
-          <label htmlFor="reserve">預約諮詢時間</label>
+          <label htmlFor="reserve">預約諮詢日期</label>
         </div>
         <div className="mb-lg-5 mb-4">
           <p className="fs-by-md mb-2">如何得知我們</p>
@@ -151,47 +165,63 @@ export default function Link() {
                 source.map((item)=>(
                     <div className="form-check form-check-inline fs-by-sm me-lg-5 me-4 mb-2" key={item.id}>
                       <input 
-                      className="form-check-input" 
-                      type="checkbox" 
-                      id={item.id} 
-                      value={item.id} />
+                        className="form-check-input" 
+                        type="checkbox" 
+                        id={item.id} 
+                        defaultValue={item.source}
+                        {...register("referralSource", {
+                          required: "請至少選擇一個選項",
+                          validate: (val) => val.length <= 3 || "最多勾選 3 個"
+                        })}
+                      />
                       <label className="form-check-label" htmlFor={item.id}>{item.source}</label>
                     </div>
                 ))
             }
+            {errors.referralSource && <div className="text-danger px-lg-2 fs-by-sm">{errors.referralSource.message}</div>}
           </div>
           <p className="text-warn px-lg-2">最多勾選 3 個</p>
         </div>
         <div className="mb-lg-5 mb-4">
           <div className="form-floating">
             <textarea className="form-control" 
-                placeholder="other-comment" 
-                id="other-comment" 
+                placeholder="otherComment" 
+                id="otherComment" 
                 style={{height: "160px"}}
-                maxLength="300"
+                {...register("otherComment", {
+                  maxLength: { value: 300, message: "最多 300 字" }
+                })}
             >
             </textarea>
             <label htmlFor="year-career-goal">有什麼其他想告訴我們的事情嗎？（最多300字）</label>
           </div>
+          {errors.otherComment && <span className="text-danger fs-by-sm">{errors.otherComment.message}</span>}
         </div>
         <div className="d-flex flex-column px-lg-2 px-1">
           <div className="form-check form-check-inline me-5 mb-2">
             <input 
-            className="form-check-input"
-            type="checkbox" 
-            id="isGetInfo" 
-            value="isGetInfo" />
+                className="form-check-input"
+                type="checkbox" 
+                id="isGetInfo" 
+                {...register("isGetInfo")}
+             />
             <label className="form-check-label fs-by-sm" htmlFor="isGetInfo">我願意接收職旅最新資訊和專業內容</label>
           </div>
           <div className="form-check form-check-inline">
             <input 
-            className="form-check-input"
-            type="checkbox" 
-            id="isAgreeTerm" 
-            value="isAgreeTerm" />
-            <label className="form-check-label fs-by-sm" htmlFor="isAgreeTerm">我同意<a href="terms.html" className="text-primary">服務條款</a>和<a href="privacy.html" className="text-primary">隱私政策</a></label>
+                className="form-check-input"
+                type="checkbox" 
+                id="isAgreeTerm" 
+                {...register("isAgreeTerm", { 
+                    required: "必須同意服務條款才能送出" 
+                })}
+            />
+            <label className="form-check-label fs-by-sm" htmlFor="isAgreeTerm">我同意
+                <NavLink className='text-primary' to='/Terms'>服務條款</NavLink>
+                和<NavLink className='text-primary' to='/Privacy'>隱私政策</NavLink>
+            </label>
           </div>
-
+          {errors.isAgreeTerm && <span className="text-danger fs-by-sm">{errors.isAgreeTerm.message}</span>}
         </div>
       </div>
     </div>

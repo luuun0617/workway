@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-export default function WorkDropdown() {
+export default function WorkDropdown({ onSelect }) {
+  
   const [selectedWork, setSelectedWork] = useState("目前職業/工作身分");
 
   const work = [
@@ -12,6 +13,14 @@ export default function WorkDropdown() {
     "待業中" , 
     "其他"
     ];
+
+    const handleItemClick = (item) => {
+      setSelectedWork(item);
+
+      if (onSelect) {
+        onSelect(item);
+      }
+    };    
 
   return (
     <div className="dropdown">
@@ -31,7 +40,7 @@ export default function WorkDropdown() {
               type="button"
               className="dropdown-item"
               style={{ cursor: 'pointer' }}
-              onClick={() => setSelectedWork(item)}
+              onClick={() => handleItemClick(item)}
             >
               {item}
             </button>

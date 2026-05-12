@@ -5,10 +5,25 @@ import { Outlet } from 'react-router-dom'
 
 import Header from './layout/Header'
 import Footer from './layout/Footer'
-
-// const { VITE_APP_PATH } = import.meta.env;
+import { useEffect } from 'react';
 
 function App() {
+
+
+  useEffect(() => {
+    const handleModalHide = () => {
+      if (document.activeElement instanceof HTMLElement && 
+          document.activeElement.closest('.modal')) {
+        document.activeElement.blur();
+      }
+    };
+
+    document.addEventListener('hide.bs.modal', handleModalHide);  
+  
+    return () => {
+      document.removeEventListener('hide.bs.modal', handleModalHide);
+    };
+  }, []);
 
   return (
     <>

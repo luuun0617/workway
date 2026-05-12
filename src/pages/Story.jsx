@@ -36,7 +36,7 @@ export default function Story() {
         <div className="bg-story"></div>
         <div className="container">
           <div className="d-flex flex-wrap align-items-center">
-            {/* <!-- 左 --> */}
+            {/* 左 */}
             <div className="col-lg-4 mb-lg-0 mb-5">
               <img
                 src={logoIcon}
@@ -48,7 +48,7 @@ export default function Story() {
                 每一段職涯轉型都有獨特挑戰，這些曾經與你有相同疑惑的夥伴，現在正過著他們嚮往的生活
               </p>
             </div>
-            {/* <!-- 右 --> */}
+            {/* 右 */}
             <div className="col-lg-8 col-12 p-lg-3 p-0" data-aos="fade-right">
               <div className="card-group d-flex flex-nowrap overflow-auto story-card">
                 {
