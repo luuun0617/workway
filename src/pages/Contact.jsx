@@ -34,7 +34,7 @@ export default function Contact() {
     const onSubmit = async(formData) => {
       try {
         const token = localStorage.getItem("workway_token");
-        const response = await axios.post("http://localhost:3000/contacts", formData, {
+        const response = await axios.post(`${import.meta.env.VITE_APP_PATH}/contacts`, formData, {
           headers: {
             Authorization: `Bearer ${token}`
           }

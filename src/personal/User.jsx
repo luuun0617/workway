@@ -27,7 +27,7 @@ export default function User() {
         const userId = getUserId();
         if (userId) {
           try {
-            const response = await axios.get(`http://localhost:3000/users/${userId}`);
+            const response = await axios.get(`${import.meta.env.VITE_APP_PATH}/users/${userId}`);
             if (response.data.userPlans) {
               reset(response.data.userPlans);
             }
@@ -47,7 +47,7 @@ export default function User() {
       }
 
       try {
-        await axios.patch(`http://localhost:3000/users/${userId}`, {
+        await axios.patch(`${import.meta.env.VITE_APP_PATH}/users/${userId}`, {
           userPlans: data 
         });
         alert("資料已成功儲存！");

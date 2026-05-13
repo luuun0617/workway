@@ -32,7 +32,7 @@ function Login({ setIsLogin }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:3000/login', loginData);
+      const { data } = await axios.post(`${import.meta.env.VITE_APP_PATH}/login`, loginData);
       localStorage.setItem('workway_token', data.accessToken);
       localStorage.setItem('user_info', JSON.stringify(data.user));
 
