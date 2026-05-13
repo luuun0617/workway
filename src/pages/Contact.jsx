@@ -8,7 +8,8 @@ import Refill from '../btn/Refill'
 
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import axios from 'axios'
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase';
 
 export default function Contact() {
   const {
@@ -31,20 +32,16 @@ export default function Contact() {
       mode: 'onTouched',
     });
 
-    const onSubmit = async(formData) => {
+    const onSubmit = async (formData) => {
       try {
-        const token = localStorage.getItem("workway_token");
-        const response = await axios.post(`${import.meta.env.VITE_APP_PATH}/contacts`, formData, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
+        await addDoc(collection(db, 'contacts'), {
+          ...formData,
+          createdAt: serverTimestamp(),
         });
-
-        console.log("資料已成功儲存到 json-server：", response.data);
         alert("表單已成功送出！我們會盡快與您聯絡。");
-
       } catch (error) {
-        console.error("送出失敗", error.response?.data || error.message);
+        console.error("送出失敗", error.message);
+        alert("送出失敗，請稍後再試");
       }
     };
 

@@ -16,6 +16,7 @@
     "aos": "^2.3.4",
     "axios": "^1.15.2",
     "bootstrap": "^5.3.8",
+    "firebase": "^12.13.0",
     "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0",
     "react": "^19.2.5",

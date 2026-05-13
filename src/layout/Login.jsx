@@ -2,8 +2,9 @@ import login from '../assets/images/login.png'
 import google from '../assets/images/google.svg'
 import discord from '../assets/images/discord.svg'
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const socialButtons = [
   { 
@@ -32,16 +33,15 @@ function Login({ setIsLogin }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`${import.meta.env.VITE_APP_PATH}/login`, loginData);
-      localStorage.setItem('workway_token', data.accessToken);
-      localStorage.setItem('user_info', JSON.stringify(data.user));
+      const { user } = await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
+      localStorage.setItem('user_info', JSON.stringify({ id: user.uid, email: user.email }));
 
       window.bootstrap?.Modal.getInstance(document.getElementById('loginModal'))?.hide();
       setIsLogin(true);
       alert('登入成功！');
       navigate('/User');
     } catch (error) {
-      alert(error.response?.data || '登入失敗，請檢查資料格式');
+      alert(error.message || '登入失敗，請檢查帳號密碼');
     }
   };
 

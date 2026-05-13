@@ -1,5 +1,7 @@
-import axios from "axios";
 import "../assets/scss/pages/_user.scss"
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { db, auth, storage } from '../firebase';
 import AppointList from "./AppointList";
 import Education from "./Education";
 import PersonInfo from "./PersonInfo";
@@ -17,39 +19,40 @@ export default function User() {
       reset 
     } = useForm();
 
-    const getUserId = () => {
-      const userInfo = JSON.parse(localStorage.getItem("user_info") || "{}");
-      return userInfo.id;
-    };
-
     useEffect(() => {
       const fetchUserData = async () => {
-        const userId = getUserId();
-        if (userId) {
-          try {
-            const response = await axios.get(`${import.meta.env.VITE_APP_PATH}/users/${userId}`);
-            if (response.data.userPlans) {
-              reset(response.data.userPlans);
-            }
-          } catch (error) {
-            console.error("抓取舊資料失敗", error);
+        const uid = auth.currentUser?.uid;
+        if (!uid) return;
+        try {
+          const snap = await getDoc(doc(db, 'users', uid));
+          if (snap.exists() && snap.data().userPlans) {
+            reset(snap.data().userPlans);
           }
+        } catch (error) {
+          console.error("抓取舊資料失敗", error);
         }
       };
       fetchUserData();
     }, [reset]);
 
     const onSubmit = async (data) => {
-      const userId = getUserId();
-      if (!userId) {
+      const uid = auth.currentUser?.uid;
+      if (!uid) {
         alert("請先登入！");
         return;
       }
-
       try {
-        await axios.patch(`${import.meta.env.VITE_APP_PATH}/users/${userId}`, {
-          userPlans: data 
-        });
+        let attachmentUrl = null;
+        const fileList = data.attachment;
+        if (fileList && fileList.length > 0) {
+          const file = fileList[0];
+          const fileRef = ref(storage, `users/${uid}/attachment/${file.name}`);
+          await uploadBytes(fileRef, file);
+          attachmentUrl = await getDownloadURL(fileRef);
+        }
+        await setDoc(doc(db, 'users', uid), {
+          userPlans: { ...data, attachment: attachmentUrl }
+        }, { merge: true });
         alert("資料已成功儲存！");
       } catch (error) {
         console.error("儲存失敗：", error);

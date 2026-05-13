@@ -2,9 +2,10 @@ import google from '../assets/images/google.svg'
 import discord from '../assets/images/discord.svg'
 import register from '../assets/images/register.png'
 import { NavLink, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Modal } from 'bootstrap';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const cleanupModal = () => {
   document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
@@ -55,12 +56,9 @@ function Register() {
       setIsLoading(true);
 
       try {
-        const response = await axios.post(`${import.meta.env.VITE_APP_PATH}/register`, {
-          email: registerData.email,
-          password: registerData.password
-        });
+        const { user } = await createUserWithEmailAndPassword(auth, registerData.email, registerData.password);
 
-        localStorage.setItem("workway_token", response.data.accessToken);
+        localStorage.setItem("user_info", JSON.stringify({ id: user.uid, email: user.email }));
 
         const modalElement = document.getElementById('registerModal');
         let modalInstance = Modal.getInstance(modalElement);
