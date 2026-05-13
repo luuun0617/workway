@@ -5,13 +5,9 @@ const path = require('path');
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
-// 1. 必須將 db 綁定到 server，這是 json-server-auth 的要求
 server.db = router.db;
 
-// 2. 設定中間件
 server.use(middlewares);
-
-// 3. 關鍵：在 router 之前掛載 auth
 server.use(auth);
 server.use(router);
 
