@@ -1,4 +1,5 @@
 import team from "../assets/images/team.png"
+import { NavLink } from "react-router-dom"
 export default function Partner() {
     return(<>
     <div className="py-lg-7 py-6 career-partner">
@@ -32,12 +33,10 @@ export default function Partner() {
                 我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。
               </p>
               <div className="d-flex justify-content-center justify-content-lg-start">
-                <button type="button" className="btn btn-dark btn-about">
-                  <a href="about.html" className="me-lg-1 me-0 fs-by-md text-white">
-                    了解更多職旅夥伴
-                  </a>
-                  <span className="material-icons-outlined align-bottom">keyboard_arrow_right</span>
-                </button>
+                <NavLink to="/About" className="btn btn-dark btn-about text-white fs-by-md">
+                  了解更多職旅夥伴
+                  <span className="material-icons-outlined align-bottom ms-1">keyboard_arrow_right</span>
+                </NavLink>
               </div>
             </div>
           </div>
